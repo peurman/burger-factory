@@ -1,0 +1,61 @@
+@use '../../../../sass/styles.scss' as *;
+
+.burger {
+  @include centerMeColumn;
+  gap: 10px;
+  text-align: center;
+  .burger__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .burger__body {
+    @include centerMeColumn;
+    align-items: initial;
+    width: 300px;
+    gap: 8px;
+  }
+}
+.burger #top-bun {
+  height: 40px;
+  border-radius: 50px 50px 10px 10px;
+  background-color: $burger-top-bun-color;
+  border-top: 9px solid $burger-top-bun-border-color;
+}
+
+.burger #meat {
+  border-radius: 13px;
+  background-color: $burger-meat-color;
+  height: 22px;
+  border-bottom: 10px solid $burger-meat-border-color;
+}
+.burger #cheese {
+  background-color: $burger-cheese-color;
+  border-radius: 10px;
+  height: 20px;
+  border-bottom: 5px solid $burger-cheese-border-color;
+}
+.burger #lettuce {
+  border-radius: 8px;
+  background-color: $burger-lettuce-color;
+  height: 17px;
+  border-bottom: 3px solid $burger-lettuce-border-color;
+}
+.burger #tomato {
+  border-radius: 14px;
+  background-color: $burger-tomato-color;
+  height: 22px;
+  border-bottom: 5px solid $burger-tomato-border-color;
+}
+.burger #salad {
+  border-radius: 8px;
+  background-color: $burger-salad-color;
+  height: 15px;
+  border-bottom: 4px solid $burger-salad-border-color;
+  margin: 5px 0;
+}
+.burger #bottom-bun {
+  background-color: $burger-bottom-bun-color;
+  border-radius: 10px 10px 50px 50px;
+  height: 40px;
+  border-bottom: 11px solid $burger-bottom-bun-border-color;
+}

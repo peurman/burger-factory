@@ -1,0 +1,10 @@
+<div class="burger">
+  <label class="burger__title">This is how your burger looks like:</label>
+  <div class="burger__body">
+    <div id="top-bun"></div>
+    <div *ngFor="let ingredient of startedHamburger">
+      <div [id]="ingredient">{{ ingredient }}</div>
+    </div>
+    <div id="bottom-bun"></div>
+  </div>
+</div>

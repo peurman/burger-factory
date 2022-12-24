@@ -1,0 +1,19 @@
+<div class="ingredients-selector">
+  <label class="ingredients-selector__title"
+    >Select the ingredients you want</label
+  >
+  <div class="ingredients-selector__body">
+    <div
+      class="ingredients-selector__buttons-container"
+      *ngFor="let ingredientType of ingredientsTypes">
+      <button
+        class="ingredients-selector__button-add {{ ingredientType.name }} ">
+        add 1 <b>{{ ingredientType.name }}</b>
+      </button>
+      <button
+        class="ingredients-selector__button-remove {{ ingredientType.name }} ">
+        remove 1 <b>{{ ingredientType.name }}</b>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+@use '../../../../sass/styles.scss' as *;
+
+.ingredients-selector {
+  border: 1px solid $secondary-background-color;
+  border-radius: 5px;
+  padding: 10px;
+  @include centerMeColumn;
+  gap: 10px;
+  .ingredients-selector__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .ingredients-selector__body {
+    width: 100%;
+    @include centerMeRow;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .ingredients-selector__buttons-container {
+    @include centerMeColumn;
+    gap: 5px;
+    button {
+      padding: 3px;
+      width: 70px;
+      height: 40px;
+      margin: 0;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover {
+        background-color: $button-hover-background-color;
+        border-color: $button-hover-border-color;
+      }
+    }
+    .ingredients-selector__button-add {
+      background-color: $button-add-background-color;
+      border: 1px solid $button-add-border-color;
+    }
+    .ingredients-selector__button-remove {
+      background-color: $button-remove-background-color;
+      border: 1px solid $button-remove-border-color;
+    }
+  }
+}

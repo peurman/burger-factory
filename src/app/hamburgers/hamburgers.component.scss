@@ -1,0 +1,11 @@
+@use '../../sass/styles.scss' as *;
+
+.hamburgers__ingredients-diagram-section {
+  width: 60%;
+  @include centerMeColumn;
+  gap: 20px;
+}
+.hamburgers__price-calculator-section {
+  width: 40%;
+  @include centerMeColumn;
+}

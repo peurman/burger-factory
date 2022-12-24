@@ -1,0 +1,25 @@
+@use '../sass/styles.scss' as *;
+
+.main {
+  @include centerMeColumn;
+}
+.main .main__header {
+  color: $main-font-color;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: bold;
+  background-color: $secondary-background-color;
+  background-image: linear-gradient(to top, #b58761 0%, #c28a5f 100%);
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+.main .main__title {
+  color: $secondary-font-color;
+  font-size: 1.5rem;
+}
+.main__body {
+  @include centerMeRow;
+  align-items: flex-start;
+  width: 900px;
+}
