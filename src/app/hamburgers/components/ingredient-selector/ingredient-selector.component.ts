@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { ingredientsList } from '../../services/ingredients';
 import { Ingredients } from '../../interfaces/ingredients.interface';
 
@@ -9,4 +9,21 @@ import { Ingredients } from '../../interfaces/ingredients.interface';
 })
 export class IngredientSelectorComponent {
   ingredientsTypes: Ingredients[] = ingredientsList;
+  ingredientsSelected: Ingredients[] = [];
+
+  @Output() updateList: EventEmitter<Ingredients[]> = new EventEmitter();
+
+  handleAddIngredient(ingredientObject: Ingredients) {
+    this.ingredientsSelected.push(ingredientObject);
+    this.updateList.emit(this.ingredientsSelected);
+  }
+
+  handleRemoveIngredient(ingredientObject: Ingredients) {
+    let indexToRemove = 0;
+    indexToRemove = this.ingredientsSelected
+      .map(el => el.name)
+      .lastIndexOf(ingredientObject.name);
+    if (indexToRemove > -1) this.ingredientsSelected.splice(indexToRemove, 1);
+    this.updateList.emit(this.ingredientsSelected);
+  }
 }

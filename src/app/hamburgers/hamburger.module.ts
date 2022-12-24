@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import { HamburgersComponent } from './hamburgers.component';
 import { IngredientSelectorComponent } from './components/ingredient-selector/ingredient-selector.component';
@@ -13,9 +13,9 @@ import { HamburgerDiagramComponent } from './components/hamburger-diagram/hambur
     PriceCalculatorComponent,
     HamburgerDiagramComponent,
   ],
-  imports: [CommonModule  ],
+  imports: [CommonModule],
   exports: [HamburgersComponent],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
 })
-export class HamburgersModule{ }
+export class HamburgersModule {}

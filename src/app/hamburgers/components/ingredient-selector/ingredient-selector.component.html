@@ -5,14 +5,16 @@
   <div class="ingredients-selector__body">
     <div
       class="ingredients-selector__buttons-container"
-      *ngFor="let ingredientType of ingredientsTypes">
+      *ngFor="let ingredient of ingredientsTypes">
       <button
-        class="ingredients-selector__button-add {{ ingredientType.name }} ">
-        add 1 <b>{{ ingredientType.name }}</b>
+        class="ingredients-selector__button-add {{ ingredient.name }}"
+        (click)="handleAddIngredient(ingredient)">
+        add 1 <b>{{ ingredient.name }}</b>
       </button>
       <button
-        class="ingredients-selector__button-remove {{ ingredientType.name }} ">
-        remove 1 <b>{{ ingredientType.name }}</b>
+        class="ingredients-selector__button-remove {{ ingredient.name }}"
+        (click)="handleRemoveIngredient(ingredient)">
+        remove 1 <b>{{ ingredient.name }}</b>
       </button>
     </div>
   </div>

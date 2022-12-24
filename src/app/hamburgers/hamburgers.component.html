@@ -1,5 +1,6 @@
 <section class="hamburgers__ingredients-diagram-section">
-  <app-ingredient-selector></app-ingredient-selector>
+  <app-ingredient-selector
+    (updateList)="handleNewIngredientList($event)"></app-ingredient-selector>
   <app-hamburger-diagram
     [startedHamburger]="startedBurger"></app-hamburger-diagram>
 </section>

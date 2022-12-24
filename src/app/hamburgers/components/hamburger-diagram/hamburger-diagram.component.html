@@ -3,7 +3,7 @@
   <div class="burger__body">
     <div id="top-bun"></div>
     <div *ngFor="let ingredient of startedHamburger">
-      <div [id]="ingredient">{{ ingredient }}</div>
+      <div [id]="ingredient.name">{{ ingredient.name }}</div>
     </div>
     <div id="bottom-bun"></div>
   </div>
