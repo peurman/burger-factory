@@ -9,7 +9,13 @@
   font-style: italic;
   font-weight: bold;
   background-color: $secondary-background-color;
-  background-image: linear-gradient(to top, #b58761 0%, #c28a5f 100%);
+  background-image: linear-gradient(
+    to top,
+    #b58761 0%,
+    #c19574 30%,
+    #c19574 60%,
+    #c28a5f 100%
+  );
   width: calc(100% - 20px);
   padding: 10px;
 }
@@ -21,5 +27,5 @@
 .main__body {
   @include centerMeRow;
   align-items: flex-start;
-  width: 900px;
+  width: 800px;
 }

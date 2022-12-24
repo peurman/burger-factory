@@ -1,1 +1,26 @@
-<p>price-calculator works!</p>
+<div class="main-price-calculator">
+  <label class="main-price-calculator__title">The cost of the burger is:</label>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Units</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let ingredient of ingredientsSelected">
+      <tr>
+        <td>{{ ingredient.name }}</td>
+        <td>{{ ingredient.quantity }}</td>
+        <td>{{ ingredient.price }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td></td>
+        <td>{{ totalPrice }}</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

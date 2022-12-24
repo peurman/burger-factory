@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ingredientsList } from '../../services/ingredients';
 import { Ingredients } from '../../interfaces/ingredients.interface';
 
@@ -9,7 +9,8 @@ import { Ingredients } from '../../interfaces/ingredients.interface';
 })
 export class IngredientSelectorComponent {
   ingredientsTypes: Ingredients[] = ingredientsList;
-  ingredientsSelected: Ingredients[] = [];
+
+  @Input() ingredientsSelected: Ingredients[] = [];
 
   @Output() updateList: EventEmitter<Ingredients[]> = new EventEmitter();
 

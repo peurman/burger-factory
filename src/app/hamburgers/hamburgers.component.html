@@ -1,9 +1,12 @@
 <section class="hamburgers__ingredients-diagram-section">
   <app-ingredient-selector
+    [ingredientsSelected]="startedBurger"
     (updateList)="handleNewIngredientList($event)"></app-ingredient-selector>
   <app-hamburger-diagram
     [startedHamburger]="startedBurger"></app-hamburger-diagram>
 </section>
 <section class="hamburgers__price-calculator-section">
-  <app-price-calculator></app-price-calculator>
+  <app-price-calculator
+    [ingredientsSelected]="groupedIngredients"
+    [totalPrice]="finalPrice"></app-price-calculator>
 </section>

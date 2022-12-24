@@ -1,0 +1,14 @@
+@use '../../../../sass/styles.scss' as *;
+
+.main-price-calculator {
+  border: 1px solid $secondary-background-color;
+  border-radius: 5px;
+  padding: 10px;
+  @include centerMeColumn;
+  width: calc(100% - 20px);
+  gap: 10px;
+  .main-price-calculator__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
