@@ -2,13 +2,69 @@
 
 .main-price-calculator {
   border: 1px solid $secondary-background-color;
+  background-image: linear-gradient(135deg, #e5d9cc 0%, #fae2cf 100%);
   border-radius: 5px;
   padding: 10px;
   @include centerMeColumn;
-  width: calc(100% - 20px);
+  width: 100%;
   gap: 10px;
   .main-price-calculator__title {
     font-size: 1.1rem;
     font-weight: 600;
+  }
+  .main-price-calculator__currency {
+    padding: 5px;
+    background-color: $table-main-rows-background-color;
+    color: $secondary-font-color;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+}
+.main-price-calculator__table {
+  text-align: center;
+  border: 2px solid $secondary-background-color;
+  border-spacing: 0;
+  border-radius: 7px;
+  tr th,
+  tr td {
+    padding: 5px;
+    border-right: 1px solid $secondary-background-color;
+    border-bottom: 1px solid $secondary-background-color;
+    color: $table-font-color;
+    &:first-child {
+      width: 90px;
+      font-weight: bold;
+    }
+    &:nth-child(2) {
+      width: 60px;
+    }
+    &:last-child {
+      width: 120px;
+      border: none;
+      border-bottom: 1px solid $secondary-background-color;
+    }
+  }
+  tr th {
+    color: $secondary-font-color;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: $table-main-rows-background-color;
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background-color: $table-odd-rows-background-color;
+    }
+    tr:nth-child(even) {
+      background-color: $table-even-rows-background-color;
+    }
+  }
+  tfoot tr td {
+    color: $secondary-font-color;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: $table-main-rows-background-color;
+    border-bottom: none;
+    border-right: none;
   }
 }

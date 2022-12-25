@@ -27,5 +27,6 @@
 .main__body {
   @include centerMeRow;
   align-items: flex-start;
-  width: 800px;
+  width: 900px;
+  gap: 20px;
 }

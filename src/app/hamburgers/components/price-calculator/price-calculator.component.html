@@ -1,6 +1,13 @@
 <div class="main-price-calculator">
   <label class="main-price-calculator__title">The cost of the burger is:</label>
-  <table>
+  <select
+    class="main-price-calculator__currency"
+    (change)="handleSelect($event)">
+    <option value="USD" default>USD</option>
+    <option value="ARS">ARS</option>
+    <option value="MXN">MXN</option>
+  </select>
+  <table class="main-price-calculator__table">
     <thead>
       <tr>
         <th>Name</th>
@@ -8,18 +15,34 @@
         <th>Total</th>
       </tr>
     </thead>
-    <tbody *ngFor="let ingredient of ingredientsSelected">
-      <tr>
+    <tbody>
+      <tr *ngFor="let ingredient of ingredientsSelected">
         <td>{{ ingredient.name }}</td>
         <td>{{ ingredient.quantity }}</td>
-        <td>{{ ingredient.price }}</td>
+        <td>
+          $
+          {{
+            (currencyExchangeRate * ingredient.price).toLocaleString('en-US', {
+              maximumFractionDigits: 2,
+              minimumFractionDigits: 2
+            })
+          }}
+        </td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
         <td>Total</td>
         <td></td>
-        <td>{{ totalPrice }}</td>
+        <td>
+          $
+          {{
+            (currencyExchangeRate * totalPrice).toLocaleString('en-US', {
+              maximumFractionDigits: 2,
+              minimumFractionDigits: 2
+            })
+          }}
+        </td>
       </tr>
     </tfoot>
   </table>

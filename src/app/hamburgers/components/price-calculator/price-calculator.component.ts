@@ -10,4 +10,23 @@ import { GroupedIngredients } from '../../interfaces/grouped-ingredients.interfa
 export class PriceCalculatorComponent {
   @Input() ingredientsSelected: GroupedIngredients[] = [];
   @Input() totalPrice = 0;
+
+  currencyExchangeRate = 1;
+
+  handleSelect(e: any) {
+    switch (e.target.value) {
+      case 'USD':
+        this.currencyExchangeRate = 1;
+        break;
+      case 'ARS':
+        this.currencyExchangeRate = 300;
+        break;
+      case 'MXN':
+        this.currencyExchangeRate = 50;
+        break;
+      default:
+        this.currencyExchangeRate = 1;
+        break;
+    }
+  }
 }
