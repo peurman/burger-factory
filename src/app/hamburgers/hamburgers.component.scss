@@ -2,8 +2,13 @@
 
 .hamburgers__ingredients-diagram-section {
   @include centerMeColumn;
-  gap: 20px;
+  gap: 15px;
 }
-.hamburgers__price-calculator-section {
+.hamburgers__price-order-section {
   @include centerMeColumn;
+  gap: 15px;
+  border: 1px solid $secondary-background-color;
+  background-image: linear-gradient(135deg, #e5d9cc 0%, #fae2cf 100%);
+  border-radius: 5px;
+  padding: 10px;
 }

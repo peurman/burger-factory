@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { Ingredients } from './interfaces/ingredients.interface';
 import { GroupedIngredients } from './interfaces/grouped-ingredients.interface';
@@ -12,16 +12,28 @@ import { ingredientsList } from './services/ingredients';
 export class HamburgersComponent implements OnInit {
   startedBurger: Ingredients[] = [];
   groupedIngredients: GroupedIngredients[] = [];
+  burgersHistory: Array<Ingredients[]> = [];
   finalPrice = 0;
   basePrice = 1;
 
   ngOnInit() {
+    // last selection
     const storageBurger = localStorage.getItem('startedBurger');
     this.startedBurger = storageBurger ? JSON.parse(storageBurger) : [];
     this.groupIngredients(this.startedBurger);
+    // burgers history
+    const storageHistory = localStorage.getItem('burgersHistory');
+    this.burgersHistory = storageHistory ? JSON.parse(storageHistory) : [];
+
+    // 'remove' buttons state
+    // this.startedBurger?.forEach(el => {
+    //   if (el.name === 'meat')
+    //     document.getElementById(el.name).disabled = 'true';
+    // });
   }
-  handleNewIngredientList(event: Ingredients[]) {
-    this.startedBurger = event;
+
+  handleNewIngredientList(ingredientsSelected: Ingredients[]) {
+    this.startedBurger = ingredientsSelected;
     localStorage.setItem('startedBurger', JSON.stringify(this.startedBurger));
     this.groupIngredients(this.startedBurger);
   }
@@ -53,5 +65,22 @@ export class HamburgersComponent implements OnInit {
       });
       this.groupedIngredients.push(newObj);
     }
+  }
+
+  handleOrderedBurger(burgerOrder: Ingredients[]) {
+    alert('Your burger has been ordered!');
+    this.burgersHistory.push(burgerOrder);
+    localStorage.setItem('burgersHistory', JSON.stringify(this.burgersHistory));
+    this.startedBurger = [];
+    localStorage.setItem('startedBurger', JSON.stringify(this.startedBurger));
+    this.groupIngredients(this.startedBurger);
+
+    (document.getElementById('historyOfBurgers') as HTMLSelectElement).value =
+      '';
+  }
+
+  handleOldBurgerSelected(value: number) {
+    this.startedBurger = this.burgersHistory[value];
+    this.groupIngredients(this.startedBurger);
   }
 }

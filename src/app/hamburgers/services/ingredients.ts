@@ -11,14 +11,18 @@ export const ingredientsList: Ingredients[] = [
   },
   {
     name: 'salad',
-    price: 0.2,
+    price: 0.25,
   },
   {
     name: 'tomato',
-    price: 0.4,
+    price: 0.35,
   },
   {
     name: 'lettuce',
     price: 0.3,
   },
+  // {
+  //   name: 'onion',
+  //   price: 0.4,
+  // },
 ];

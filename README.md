@@ -1,27 +1,29 @@
-# Week5Part1
+# Week 5 Part 1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## BURGER FACTORY
 
-## Development server
+We had to create a simple burger builder, with at least 3 ingredients: <br/>
+• Meat ($1.50)<br/>
+• Cheese ($0.50)<br/>
+• Salad ($0.25)<br/>
+Our users can build a burger using any mix of ingredients they like.<br/>
+When a user adds or removes an ingredient you need to update the burger's ingredients visually, also the buttons and total detail.<br/>
+A thing to consider: The burger has a base Price of $1.00. <br/>
+The state of the burger must be saved in local storage.<br/>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Additional Information
 
-## Code scaffolding
+• Don't use Any to define object types.<br/>
+• Use any directive you considered useful.<br/>
+Don't use CSS framework like bootstrap.<br/>
+• Create at least 3 components to build this app.<br/>
+• The burger, price and buttons need to be updated when a new ingredient is added or removed. · The price should be formatted with 2 decimals and the $ currency symbol. <br/>
+• You can change the currency type (ej: USD, AUD, MXN). The default currency to be shown is USD. · Use local storage to persist data.<br/>
+• Your solution need to easily allow more ingredients to be available. You can add more ingredients if you want to.<br/>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Extra Credits
 
-## Build
+• Make a great looking UI. Draw the burger and ingredients with CSS instead of using images and use CSS Animations.<br/>
+• Save burger and show history of previous created burger. When you click a burger from the history it will update the current burger.<br/>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### I hope you enjoy it!
