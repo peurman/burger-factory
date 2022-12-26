@@ -25,6 +25,7 @@ export class IngredientSelectorComponent {
       .map(el => el.name)
       .lastIndexOf(ingredientObject.name);
     if (indexToRemove > -1) this.ingredientsSelected.splice(indexToRemove, 1);
+
     this.updateList.emit(this.ingredientsSelected);
   }
 }

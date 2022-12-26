@@ -1,0 +1,23 @@
+@use '../../../../sass/styles.scss' as *;
+
+.main-burger-order {
+  padding-bottom: 15px;
+  border-bottom: 1px solid $secondary-background-color;
+  .main-burger-order__button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px;
+    width: 200px;
+    height: 40px;
+    margin: 0;
+    border-radius: 7px;
+    background-color: $button-order-background-color;
+    border: 1px solid $button-order-border-color;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      background-color: $button-hover-background-color;
+      border-color: $button-hover-border-color;
+    }
+  }
+}

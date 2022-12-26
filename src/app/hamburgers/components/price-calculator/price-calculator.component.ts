@@ -13,8 +13,9 @@ export class PriceCalculatorComponent {
 
   currencyExchangeRate = 1;
 
-  handleSelect(e: any) {
-    switch (e.target.value) {
+  handleSelect(event: Event) {
+    const eventValue = (event.target as HTMLInputElement).value;
+    switch (eventValue) {
       case 'USD':
         this.currencyExchangeRate = 1;
         break;

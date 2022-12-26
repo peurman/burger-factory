@@ -12,6 +12,7 @@
         add 1 <b>{{ ingredient.name }}</b>
       </button>
       <button
+        [id]="ingredient.name"
         class="ingredients-selector__button-remove {{ ingredient.name }}"
         (click)="handleRemoveIngredient(ingredient)">
         remove 1 <b>{{ ingredient.name }}</b>

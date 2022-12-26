@@ -1,0 +1,18 @@
+<div class="main-burger-history">
+  <label class="main-burger-history__label"
+    >Select an already ordered burger:</label
+  >
+  <select
+    #historyOfBurgers
+    class="main-burger-history__select"
+    id="historyOfBurgers"
+    (change)="handleSelect($event)"
+    [value]="'Select a burger...'">
+    <option default hidden>Select a burger...</option>
+    <option
+      *ngFor="let order of burgersOrdered"
+      [value]="burgersOrdered.indexOf(order)">
+      Burger {{ burgersOrdered.indexOf(order) + 1 }}
+    </option>
+  </select>
+</div>

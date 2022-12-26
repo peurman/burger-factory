@@ -1,0 +1,17 @@
+@use '../../../../sass/styles.scss' as *;
+
+.main-burger-history {
+  @include centerMeColumn;
+  gap: 15px;
+  .main-burger-history__label {
+    font-size: 1rem;
+  }
+  .main-burger-history__select {
+    color: $secondary-font-color;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $table-main-rows-background-color;
+  }
+}

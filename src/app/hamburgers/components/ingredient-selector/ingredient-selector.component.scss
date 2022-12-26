@@ -5,6 +5,7 @@
   background-image: linear-gradient(135deg, #e5d9cc 0%, #fae2cf 100%);
   border-radius: 5px;
   padding: 10px;
+  width: calc(100% - 20px);
   @include centerMeColumn;
   gap: 10px;
   .ingredients-selector__title {
