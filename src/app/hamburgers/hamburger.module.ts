@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { IngredientsService } from './services/ingredients/ingredients.service';
+
 import { HamburgersComponent } from './hamburgers.component';
 import { IngredientSelectorComponent } from './components/ingredient-selector/ingredient-selector.component';
 import { PriceCalculatorComponent } from './components/price-calculator/price-calculator.component';
@@ -19,7 +21,7 @@ import { HamburgerHistoryComponent } from './components/hamburger-history/hambur
   ],
   imports: [CommonModule],
   exports: [HamburgersComponent],
-  providers: [],
+  providers: [IngredientsService],
   bootstrap: [],
 })
 export class HamburgersModule {}

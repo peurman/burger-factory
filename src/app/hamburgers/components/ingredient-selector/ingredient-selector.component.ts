@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ingredientsList } from '../../services/ingredients';
 import { Ingredients } from '../../interfaces/ingredients.interface';
+
+import { IngredientsService } from '../../services/ingredients/ingredients.service';
 
 @Component({
   selector: 'app-ingredient-selector',
@@ -8,7 +9,7 @@ import { Ingredients } from '../../interfaces/ingredients.interface';
   styleUrls: ['./ingredient-selector.component.scss'],
 })
 export class IngredientSelectorComponent {
-  ingredientsTypes: Ingredients[] = ingredientsList;
+  constructor(public ingredientsService: IngredientsService) {}
 
   @Input() ingredientsSelected: Ingredients[] = [];
 

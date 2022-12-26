@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Ingredients } from './interfaces/ingredients.interface';
 import { GroupedIngredients } from './interfaces/grouped-ingredients.interface';
-import { ingredientsList } from './services/ingredients';
+
+import { IngredientsService } from './services/ingredients/ingredients.service';
 
 @Component({
   selector: 'app-hamburgers',
@@ -10,6 +11,7 @@ import { ingredientsList } from './services/ingredients';
   styleUrls: ['./hamburgers.component.scss'],
 })
 export class HamburgersComponent implements OnInit {
+  constructor(public ingredientsService: IngredientsService) {}
   startedBurger: Ingredients[] = [];
   groupedIngredients: GroupedIngredients[] = [];
   burgersHistory: Array<Ingredients[]> = [];
@@ -60,7 +62,7 @@ export class HamburgersComponent implements OnInit {
         quantity: value,
         price: 0,
       };
-      ingredientsList.forEach(elem => {
+      this.ingredientsService.ingredientsList.forEach(elem => {
         if (key === elem.name) newObj.price = value * elem.price;
       });
       this.groupedIngredients.push(newObj);
@@ -69,7 +71,7 @@ export class HamburgersComponent implements OnInit {
 
   handleOrderedBurger(burgerOrder: Ingredients[]) {
     alert('Your burger has been ordered!');
-    this.burgersHistory.push(burgerOrder);
+    this.burgersHistory.unshift(burgerOrder);
     localStorage.setItem('burgersHistory', JSON.stringify(this.burgersHistory));
     this.startedBurger = [];
     localStorage.setItem('startedBurger', JSON.stringify(this.startedBurger));

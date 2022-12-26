@@ -1,6 +1,7 @@
 @use '../../../../sass/styles.scss' as *;
 
 .main-burger-order {
+  @include centerMeColumn;
   padding-bottom: 15px;
   border-bottom: 1px solid $secondary-background-color;
   .main-burger-order__button {

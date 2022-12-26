@@ -5,7 +5,7 @@
   <div class="ingredients-selector__body">
     <div
       class="ingredients-selector__buttons-container"
-      *ngFor="let ingredient of ingredientsTypes">
+      *ngFor="let ingredient of ingredientsService.ingredientsList">
       <button
         class="ingredients-selector__button-add {{ ingredient.name }}"
         (click)="handleAddIngredient(ingredient)">

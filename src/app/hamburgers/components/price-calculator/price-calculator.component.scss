@@ -24,10 +24,11 @@
   border-radius: 7px;
   tr th,
   tr td {
+    font-size: 1rem;
+    color: $table-font-color;
     padding: 5px;
     border-right: 1px solid $secondary-background-color;
     border-bottom: 1px solid $secondary-background-color;
-    color: $table-font-color;
     &:first-child {
       width: 90px;
       font-weight: bold;
@@ -44,7 +45,6 @@
   tr th {
     color: $secondary-font-color;
     font-weight: 600;
-    font-size: 1.1rem;
     background-color: $table-main-rows-background-color;
   }
   tbody {
@@ -57,7 +57,6 @@
   }
   tfoot tr td {
     color: $secondary-font-color;
-    font-size: 1.1rem;
     font-weight: 600;
     background-color: $table-main-rows-background-color;
     border-bottom: none;
