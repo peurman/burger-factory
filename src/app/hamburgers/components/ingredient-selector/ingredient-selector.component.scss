@@ -34,6 +34,11 @@
         background-color: $button-hover-background-color;
         border-color: $button-hover-border-color;
       }
+      &:disabled {
+        background-color: $button-disabled-background-color;
+        border-color: $button-disabled-border-color;
+        cursor: auto;
+      }
     }
     .ingredients-selector__button-add {
       background-color: $button-add-background-color;

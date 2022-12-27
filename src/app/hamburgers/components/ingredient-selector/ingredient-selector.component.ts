@@ -29,4 +29,10 @@ export class IngredientSelectorComponent {
 
     this.updateList.emit(this.ingredientsSelected);
   }
+
+  checkDisabled(ingredientsArray: Ingredients[], ingredientName: string) {
+    if (ingredientsArray.filter(el => el.name === ingredientName).length > 0)
+      return false;
+    return true;
+  }
 }

@@ -12,6 +12,9 @@
         add 1 <b>{{ ingredient.name }}</b>
       </button>
       <button
+        [attr.disabled]="
+          checkDisabled(ingredientsSelected, ingredient.name) ? true : null
+        "
         [id]="ingredient.name"
         class="ingredients-selector__button-remove {{ ingredient.name }}"
         (click)="handleRemoveIngredient(ingredient)">
