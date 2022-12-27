@@ -1,6 +1,6 @@
-# Week 5 Part 1
+# BURGER FACTORY
 
-## BURGER FACTORY
+## Week 5 Exercise 1
 
 We had to create a simple burger builder, with at least 3 ingredients: <br/>
 • Meat ($1.50)<br/>
