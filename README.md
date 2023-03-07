@@ -1,6 +1,8 @@
 # BURGER FACTORY
+(created on January 2023)
+<br/>
 
-## Week 5 Exercise 1
+## Angular Trainee Program - week 5
 
 We had to create a simple burger builder, with at least 3 ingredients: <br/>
 • Meat ($1.50)<br/>
