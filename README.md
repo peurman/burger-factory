@@ -5,8 +5,6 @@
 ### - _Deploy_: **<a target="_blank" href="https://burger-factory-peurman.netlify.app/">HERE</a>**
 
 (created on December 2022)
-<br/>
-* *Deploy*: **<a target="_blank" href="https://burger-factory-peurman.netlify.app/">HERE</a>**
 
 ## Angular Trainee Program - week 5
 
